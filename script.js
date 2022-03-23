@@ -140,7 +140,9 @@ function endGame() {
 
 // ф-ция получения рандомного цвета в шестнадцатиричном формате
 function generateRandomColor() {
-    return "#" + Math.floor(Math.random()*16777215).toString(16)
+    const colors = ['red', 'green', 'blue', 'black', 'yellow', 'brown', 'orange', 'purple'];
+    const randomIndex = getRandom(0, colors.length - 1);
+    return colors[randomIndex]
 }
 
 // ф-ция получения рандомного целого числа в заданном диапазоне от min до max
